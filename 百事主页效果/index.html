@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>主页</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="img\logo11.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's what<br><span>I like</span></h2>
+                <p>Pepsi.The world's leading beverage and
+                     snack food company.In July 2020,
+                      Forbes' 2020 Global Brand Value
+                       Top 100 was released, and Pepsi ranked 36th.</p>
+                <a href="#">View  All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/蓝色.png" alt="" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/白色1.png" alt="" onclick="imgslider('img/白色1.png');changeBgColor('#e60c2c')"></li> 
+            <li><img src="img/蓝色.png" alt="" onclick="imgslider('img/蓝色.png');changeBgColor('#0062be')"></li> 
+            <li><img src="img/黑色1.png" alt="" onclick="imgslider('img/黑色.png');changeBgColor('#1e1e1e')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="icon/qq.png" alt=""></a></li>
+            <li><a href="#"><img src="icon/weibo.png" alt=""></a></li>
+            <li><a href="#"><img src="icon/weixin.png" alt=""></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgslider(anything) {
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgColor(color) {
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
